@@ -39,6 +39,7 @@ h1 {
     display: block;
     margin: 20px auto;
     border-radius: 10px;
+    transition: transform 0.3s ease-in-out;
 }
 
 /* Nút đăng ký */
@@ -92,4 +93,10 @@ h1 {
         font-size: 18px;
         padding: 10px 20px;
     }
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); } /* Phồng lên 5% */
+    100% { transform: scale(1); }
 }

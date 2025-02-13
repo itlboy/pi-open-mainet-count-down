@@ -1,5 +1,5 @@
-// Đặt ngày đến hạn: 20/02/2025 08:00 UTC
 const targetDate = new Date(Date.UTC(2025, 1, 20, 8, 0, 0)).getTime();
+const image = document.querySelector(".image"); // Lấy ảnh để áp dụng hiệu ứng
 
 function updateCountdown() {
     const now = new Date().getTime();
@@ -19,10 +19,13 @@ function updateCountdown() {
     document.getElementById("hours").textContent = hours;
     document.getElementById("minutes").textContent = minutes;
     document.getElementById("seconds").textContent = seconds;
+
+    // Kích hoạt hiệu ứng phồng/thu nhỏ ảnh mỗi giây
+    image.style.animation = "pulse 1s ease-in-out";
+    setTimeout(() => {
+        image.style.animation = "";
+    }, 900); // Đặt lại animation sau 0.9s để giữ hiệu ứng liên tục
 }
 
-// Cập nhật mỗi giây
 setInterval(updateCountdown, 1000);
-
-// Chạy ngay khi tải trang
 updateCountdown();
