@@ -1,10 +1,10 @@
 const gulp = require("gulp");
-const rev = require("gulp-rev").default; // Fix lỗi import
+const rev = require("gulp-rev"); // Không cần `.default`
 const revReplace = require("gulp-rev-replace");
 
 gulp.task("revision", function () {
     return gulp.src(["styles.css", "script.js"])
-        .pipe(rev()) // Fix lỗi
+        .pipe(rev())
         .pipe(gulp.dest("dist"))
         .pipe(rev.manifest())
         .pipe(gulp.dest("dist"));
