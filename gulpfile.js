@@ -1,5 +1,5 @@
 const gulp = require("gulp");
-const rev = require("gulp-rev").default;  // Fix lỗi
+const rev = require("gulp-rev").default; // Fix lỗi import
 const revReplace = require("gulp-rev-replace");
 
 gulp.task("revision", function () {
