@@ -5,7 +5,7 @@ const revReplace = require("gulp-rev-replace");
 // Task copy ảnh & các file tĩnh vào `dist/`
 function copyStaticFiles() {
     return gulp.src("pi.webp") // Copy ảnh pi.webp
-        .pipe(gulp.dest("dist"));
+        .pipe(gulp.dest("dist")); 
 }
 
 // Task tạo phiên bản file CSS & JS
